@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+        {% block postContent %}
+        <p>You Have loged Out</p>
+        <div class="container-fluid">
+        <br>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+          </form>
+        </div><br>
+        <div class="container">
+                <h1>{{myName}}</h1>
+                <ul>
+                    {% for number in numbers %}
+                    <li>{{number}}</li>
+                    {% endfor %}
+                </ul>
+        </div>
+        {%endblock postContent %}

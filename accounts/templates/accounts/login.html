@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+        {% block postContent %}
+        <br>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="btn btn-primary" type="submit">login</button>
+          </form>
+        <br>
+                <h1>{{myName}}</h1>
+                <ul>
+                    {% for number in numbers %}
+                    <li>{{number}}</li>
+                    {% endfor %}
+                </ul>
+        {%endblock postContent %}
+
